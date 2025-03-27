@@ -1,14 +1,11 @@
-import { ReactNode } from 'react';
-import { Provider } from 'react-redux';
-import { store } from '../lib/store';
+import ReduxProvider from "../lib/ReduxProvider";
 
-export default function RootLayout({ children }: { children: ReactNode }) {
+export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
-    <html lang=de>
+    <html lang="de">
       <body>
-        <Provider store={store}>{children}</Provider>
+        <ReduxProvider>{children}</ReduxProvider>
       </body>
     </html>
   );
 }
-
