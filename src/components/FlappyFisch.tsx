@@ -23,7 +23,7 @@ export default function FlappyFisch() {
         dispatch(setBirdPosition(birdPosition + 6)); // Vogel fällt nach unten
 
         // Überprüfen, ob der Vogel den unteren Rand des Spielfeldes erreicht hat
-        if (birdPosition >= windowHeight - 30) { // 30 ist die Höhe des Vogels
+        if (birdPosition >= windowHeight + 215 ) { // 30 ist die Höhe des Vogels
           dispatch(gameOver()); // Spiel beenden
         }
       }, 30); // alle 30 ms
@@ -49,8 +49,8 @@ export default function FlappyFisch() {
       <div
         style={{
           position: "relative",
-          width: "200px",
-          height: "400px",
+          width: "600px",
+          height: "650px",
           border: "2px solid black",
           margin: "20px auto",
         }}
